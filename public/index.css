@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: lightgrey;
+}
+
+.mainContainer {
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    justify-content: space-around;
+    width: 60%;
+    gap: 10px;
+    /* min-height: 450px; */
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 10px solid #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainContainer::after {
+    content: '';
+    top: 0;
+    left: 0;
+    background: linear-gradient(80deg, rgb(146, 123, 244), rgb(142, 126, 213));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.mainContainer .leftSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 20px;
+    color: #fff;
+}
+
+.mainContainer .leftSide .para {
+    width: 90%;
+}
+
+.mainContainer .leftSide .para p {
+    font-size: 0.8em;
+}
+
+.mainContainer .container {
+    display: flex;
+   flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    padding: 40px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #f3f2f2;
+    align-items: center;
+    justify-content: space-around;
+}
+@media (max-width : 1280px){
+    .mainContainer{
+        display: flex;
+        width: 100%;
+    }
+    .mainContainer .container{
+        width: 100%;
+    }
+    .mainContainer .leftSide{
+        width: 100%;
+    }
+}
+@media (max-width : 1080px){
+    .mainContainer{
+        display: flex;
+        width: 100%;
+    }
+    .mainContainer .container{
+        width: 100%;
+    }
+    .mainContainer .leftSide{
+        width: 100%;
+    }
+}
+@media (max-width : 780px){
+    .mainContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        /* margin-top: 100px ; */
+        width: 100%;
+    }
+    .mainContainer .container{
+        width: 100%;
+    }
+    .mainContainer .leftSide{
+        width: 100%;
+    }
+    .btnsStudentAdmin{
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width : 280px){
+    .mainContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        /* margin-top: 100px ; */
+        width: 100%;
+    }
+    .mainContainer .container{
+        width: 100%;
+    }
+    .mainContainer .leftSide{
+        width: 100%;
+    }
+}
+.btnsStudentAdmin {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btnsStudentAdmin button {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    background: rgb(117, 89, 241);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    min-width: 80%;
+    transition: all ease-in-out 0.9s;
+}
+
+.btnsStudentAdmin button::after {
+    content: '';
+    top: 0;
+    left: 0;
+    background: linear-gradient(70deg, #333, #222);
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    transition: all ease-in-out 0.9s;
+}
+
+.btnsStudentAdmin button:hover::after {
+    width: 100%;
+}
+
+.container h3 {
+    text-align: center;
+}
+
+.container .inputs {
+    width: 100%;
+    display: flex;
+}
+
+.container .inputs select {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.container .inputs input {
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid lightgrey;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.container .inputs input:focus,
+.container .inputs select:focus {
+    border: 1px solid rgb(117, 89, 241);
+}
+
+.container .btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .btns button {
+    padding: 10px;
+    width: 50%;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgb(117, 89, 241);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all ease-in-out 0.9s;
+}
+
+.container .btns button::after {
+    content: '';
+    top: 0;
+    left: 0;
+    background: #333;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    transition: all ease-in-out 0.9s;
+}
+
+.container .btns button:hover::after {
+    width: 0%;
+}
+
+#errorShow,
+#loginError,
+#adminError {
+    color: orangered;
+    font-size: 0.7em;
+}
+
+.male {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+/* loader style */
+
+.loader {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    animation: loader 3s linear infinite alternate;
+}
+
+.loader div {
+    width: 50px;
+    height: 50px;
+    background: rgb(85, 0, 255);
+    margin: 10px 0px;
+    border-radius: 50%;
+}
+
+.loader .span2 {
+    left: 50px;
+    top: 30px;
+    position: absolute;
+    background: orangered;
+}
+
+.loader .span3 {
+    background: #222;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(0.8);
+    }
+}

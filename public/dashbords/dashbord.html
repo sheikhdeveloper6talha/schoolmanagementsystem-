@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbord</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./dashbord.css">
+</head>
+
+<body>
+    <nav>
+        <div class="menueBar">
+            <i onclick="toggleMenu()" class="fa-solid fa-bars"></i>
+        </div>
+        <div class="items">
+            <div class="search">
+<select name="" id="" onchange="searchBOX(this)">
+    <option value="all"> All</option>
+    <option value="class1"> class 1</option>
+    <option value="class2"> class 2</option>
+    <option value="class3"> class 3</option>
+    <option value="class4"> class 4</option>
+    <option value="class5"> class 5</option>
+    <option value="class6"> class 6</option>
+    <option value="class7"> class 7</option>
+    <option value="class8"> class 8</option>
+    <option value="class9"> class 9</option>
+    <option value="class10"> class 10</option>
+</select>
+            </div>
+          
+            <span onclick="setting()"><i class="fa-solid fa-dharmachakra"></i></span>
+        </div>
+    </nav>
+    <div id="settings">
+
+    </div>
+   
+<div class="mainSection">
+
+    <div class="leftsideBar" id="leftsideBar">
+        <div class="imagePro">
+            <img src="../images/profi.jpg">  
+            <h3>Talha Sheikh</h3>  
+        </div>
+        <div class="itemsLeft">
+            <p onclick="home()"><i class="fa-solid fa-house"></i> Home</p>
+            <p onclick="allStudent()"> <i class="fa-solid fa-users"></i>All Student</p>
+            <p onclick="allTeacher()"><i class="fa-solid fa-chalkboard-user"></i> All Teacher</p>
+            <p onclick="feesDetails()"><i class="fa-solid fa-dollar-sign"></i> Fees</p>
+           
+        </div>
+    </div>
+    
+
+    <div class="rightItems" id="rightItems">
+        <div class="items" id="items">
+       
+        </div>
+    </div>
+    </div>
+</body>
+<script src="dashbord.js"></script>
+</html>

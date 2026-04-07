@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbord</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./teacher.css">
+</head>
+
+<body>
+    <nav>
+        <div class="menueBar">
+            <i onclick="toggleMenu()" class="fa-solid fa-bars"></i>
+        </div>
+        <div class="items">
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          
+            <span onclick="setting()"><i class="fa-solid fa-dharmachakra"></i></span>
+        </div>
+    </nav>
+    <div id="settings">
+
+    </div>
+   
+<div class="mainSection">
+
+    <div class="leftsideBar" id="leftsideBar">
+        <div class="imagePro">
+            <img id="leftImage" src="../images/profi.jpg">  
+            <h3 id="leftName">Talha Sheikh</h3>  
+        </div>
+        <div class="itemsLeft">
+            <p onclick="home()"><i class="fa-solid fa-house"></i> Home</p>
+            <p onclick="allStudent()"> <i class="fa-solid fa-users"></i>All Student</p>
+            <p onclick="allStudentMark()"><i class="fa-solid fa-chalkboard-user"></i> All Result</p>
+        
+           
+        </div>
+    </div>
+    
+
+    <div class="rightItems" id="rightItems">
+        <div class="items" id="items">
+       
+        </div>
+    </div>
+    </div>
+</body>
+<script src="teacher.js"></script>
+</html>
